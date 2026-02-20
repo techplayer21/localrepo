@@ -22,8 +22,16 @@ bathrooms = st.slider("Number of Bathrooms", 1, 5, 2)
 # 4. Predict Button
 if st.button("Predict Price"):
     # Arrange inputs into the format your model expects (usually a 2D array)
-    features = np.array([[sqft, bedrooms, bathrooms]])
-    prediction = model.predict(features)
+   import pandas as pd # Ensure this is at the top or here
+
+# Create a DataFrame to match the model's training format
+features = pd.DataFrame({
+    'sqft_living': [sqft],
+    'bedrooms': [bedrooms],
+    'bathrooms': [bathrooms]
+})
+
+prediction = model.predict(features)
     
     # Display the result
     st.success(f"The estimated price for this house is: ${prediction[0]:,.2f}")
