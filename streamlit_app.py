@@ -34,4 +34,4 @@ features = pd.DataFrame({
 prediction = model.predict(features)
     
     # Display the result
-    st.success(f"The estimated price for this house is: ${prediction[0]:,.2f}")
+st.success(f"The estimated price for this house is: ${prediction[0]:,.2f}")
