@@ -26,7 +26,7 @@ if st.button("Predict Price"):
    # Ensure this is at the top or here
 
 # Create a DataFrame to match the model's training format
-features = pd.DataFrame({
+ features = pd.DataFrame({
     'sqft_living': [sqft],
     'bedrooms': [bedrooms],
     'bathrooms': [bathrooms]
