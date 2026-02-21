@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+import pandas as pd
 
 # 1. Load your saved model
 try:
@@ -22,7 +23,7 @@ bathrooms = st.slider("Number of Bathrooms", 1, 5, 2)
 # 4. Predict Button
 if st.button("Predict Price"):
     # Arrange inputs into the format your model expects (usually a 2D array)
-   import pandas as pd # Ensure this is at the top or here
+   # Ensure this is at the top or here
 
 # Create a DataFrame to match the model's training format
 features = pd.DataFrame({
