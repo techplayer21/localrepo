@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # 1. Load the model
-with open('noteboks/house_model.pkl', 'rb') as f:
+with open('notebo0ks/house_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 st.title("🏡 California House Price Predictor")
