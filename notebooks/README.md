@@ -10,18 +10,25 @@ Discriptin - ​This project is a Machine Learning web application that predicts
 ​🛠️ Key Features:
 <br>
 ​Real-time Prediction: Enter house details to get an instant price estimate.
+<br>
 ​Machine Learning Backend: Uses a serialized .pkl model for fast inference.
+<br>
 ​Cloud Hosted: Fully deployed and accessible via the web.
 <br>
 ​📂 File Structure:
 <br>
 ​streamlit_app.py: The frontend UI and prediction logic.
-​house_model.pkl: The trained ML model.
+​<br>
+house_model.pkl: The trained ML model.
+<br>
 ​notebooks/: Research and model training steps.
+<br>
 ​requirements.txt: Necessary Python libraries for deployment.
 <br>
 ​🚀 How to Run:
 <br>
 ​Clone this repository.
+<br>
 ​Install dependencies: pip install -r requirements.txt.
+<br>
 ​Run the application: streamlit run streamlit_app.py.
