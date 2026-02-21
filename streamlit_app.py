@@ -3,39 +3,31 @@ import pickle
 import pandas as pd
 import numpy as np
 
-# 1. Load your saved model
-try:
-    with open('house_model.pkl', 'rb') as f:
-        model = pickle.load(f)
-except Exception as e:
-    st.error(f"Error loading model: {e}")
+# 1. Load the model
+with open('house_model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
-# 2. Set up the Web Page UI
-st.title("🏡 House Price Predictor")
-st.write("Enter house details to get an estimated price.")
+st.title("🏡 California House Price Predictor")
 
-# 3. Create Input Fields
-sqft = st.number_input("Square Footage", min_value=500, max_value=10000, value=1500)
-bedrooms = st.slider("Number of Bedrooms", 1, 10, 3)
-bathrooms = st.slider("Number of Bathrooms", 1, 5, 2)
+# 2. User Inputs (The ones you already have)
+sqft = st.number_input("Average Rooms (was sqft)", value=5.0)
+bedrooms = st.number_input("Average Bedrooms", value=1.0)
+occupancy = st.number_input("Average Occupancy", value=3.0)
 
-# 4. Predict Button
+# 3. Predict Button
 if st.button("Predict Price"):
-    try:
-        # IMPORTANT: These column names MUST match your CSV exactly.
-        # If your model crashes, try changing 'sqft_living' to 'SquareFootage' etc.
-        features = pd.DataFrame({
-            'sqft_living': [sqft],
-            'bedrooms': [bedrooms],
-            'bathrooms': [bathrooms]
-        })
+    # 4. Create the EXACT 8 columns the model expects
+    features = pd.DataFrame({
+        'MedInc': [5.0],        # Placeholder Median Income
+        'HouseAge': [30.0],     # Placeholder House Age
+        'AveRooms': [sqft],     # Using your input
+        'AveBedrms': [bedrooms], # Using your input
+        'Population': [1000.0], # Placeholder
+        'AveOccup': [occupancy], # Using your input
+        'Latitude': [34.0],     # Placeholder
+        'Longitude': [-118.0]   # Placeholder
+    })
 
-        # 5. Make Prediction
-        prediction = model.predict(features)
-        
-        # 6. Display the result (Properly Indented)
-        st.success(f"The estimated price for this house is: ${prediction[0]:,.2f}")
-        
-    except ValueError as e:
-        st.error(f"Feature Mismatch: {e}")
-        st.write("Check if your training data used different column names.")
+    prediction = model.predict(features)
+    # California prices are usually in $100,000s
+    st.success(f"Estimated Price: ${prediction[0] * 100000:,.2f}")
