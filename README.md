@@ -28,7 +28,7 @@ Discriptin - ​This project is a Machine Learning web application that predicts
 ​-requirements.txt: Necessary Python libraries for deployment.
 <br>
 
-###​🚀 How to Run:
+### 🚀 How to Run:
 <br>
 ​-Clone this repository.
 <br>
