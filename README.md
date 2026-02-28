@@ -7,7 +7,8 @@ Discriptin - ​This project is a Machine Learning web application that predicts
 <br>
 ​🔗 Live Web App
 <br>
-### ​🛠️ Key Features:
+
+### ​🛠️ Key Features
 <br>
 ​-Real-time Prediction: Enter house details to get an instant price estimate.
 <br>
@@ -15,6 +16,7 @@ Discriptin - ​This project is a Machine Learning web application that predicts
 <br>
 ​-Cloud Hosted: Fully deployed and accessible via the web.
 <br>
+
 ### ​📂 File Structure:
 <br>
 ​-streamlit_app.py: The frontend UI and prediction logic.
@@ -25,6 +27,7 @@ Discriptin - ​This project is a Machine Learning web application that predicts
 <br>
 ​-requirements.txt: Necessary Python libraries for deployment.
 <br>
+
 ###​🚀 How to Run:
 <br>
 ​-Clone this repository.
