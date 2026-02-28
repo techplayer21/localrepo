@@ -1,5 +1,4 @@
-# House-Price
-First Project 
+# House-Price-Predictor
 <br>
 ### Author - Yash Raj
 <br>
