@@ -1,5 +1,6 @@
 # House-Price-Predictor
 <br>
+
 ### Author - Yash Raj
 <br>
 Discriptin - ​This project is a Machine Learning web application that predicts house prices based on the California Housing dataset. It features a user-friendly interface built with Streamlit and a regression model trained using Scikit-Learn.
